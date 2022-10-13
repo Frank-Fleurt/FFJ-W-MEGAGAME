@@ -49,7 +49,6 @@ Game project Js day 3 by Florian Jérémie Frank
 ## 2e iteration
 - mise en place des effect (cf Frank)
 - integrer le random des monstrest au demarrage
-- Ajouter les stats des personnages qui influent sur le combat
 - integrer coup spécial pour les armes
 ## 3e itération
 - introduction de puissance sur les armes
