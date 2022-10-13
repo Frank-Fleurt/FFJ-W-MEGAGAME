@@ -1,8 +1,9 @@
-import {Aventurier} from "./Aventurier.js";
+//import {Aventurier} from "./Aventurier.js";
+import { Character } from "./Character.js";
 
-export class Mage extends Aventurier {
+export class Mage extends Character {
 	maxMana = 100;
-	mana = 100;
+	mana = 20;
 	sort = [];
 	strength = 35;
 	hp = 120;
@@ -23,7 +24,7 @@ export class Mage extends Aventurier {
 	get_sort() {
 		return this.sort
 	}
-	get_strength() {
+	get_strenght() {
 		return this.strength
 	}
 	get_hp() {

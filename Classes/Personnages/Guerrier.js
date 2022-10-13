@@ -16,7 +16,7 @@ export class Guerrier extends Character {
 	get_maxRage() {
 		return this.maxRage
 	} 
-	get_strength() {
+	get_strenght() {
 		return this.strength
 	}
 	get_hp() {
