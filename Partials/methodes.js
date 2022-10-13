@@ -9,9 +9,9 @@ let prompt = guess({sigint: true},);
 export function play() {
 	let character = classChoice();
 	let monster = new Monstres()
+	monster.display()
 
-	while (character.hp > 1) {
-		monster.display()
+	while (character.hp > 1 && monster.hp > 1) {
 		playRound(character, monster);
 	}
 }
