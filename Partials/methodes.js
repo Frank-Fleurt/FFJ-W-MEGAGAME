@@ -3,12 +3,14 @@ import {Aventurier} from "../Classes/Personnages/Aventurier.js";
 import {Guerrier} from "../Classes/Personnages/Guerrier.js";
 import {Mage} from "../Classes/Personnages/Mage.js";
 import {Paladin} from "../Classes/Personnages/Paladin.js";
-import {Monstres} from "../Classes/Monstres/Monstre.js";
+import {Monstres, a_monstres} from "../Classes/Monstres/Monstre.js";
 let prompt = guess({sigint: true},);
 
 export function play() {
 	let character = classChoice();
-	let monster = new Monstres()
+	let random_monster = Math.floor(Math.random() * a_monstres.length);
+	let monster = a_monstres[random_monster];
+	
 	monster.display()
 
 	while (character.hp > 0 && monster.hp > 0) {
