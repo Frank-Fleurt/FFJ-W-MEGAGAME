@@ -37,16 +37,12 @@ function prettyClasses() {
 function playRound(character, monster) {
 	let moovs = {1: "Attaquer", 2: "Ne rien faire"}
 	displayMoovs(moovs);
-	console.log(character);
-	console.log(monster);
 	let choice = prompt("Que voulez vous faire ?")
-	if (choice === 1) {
-		monster.display;
+	if (parseInt(choice) === 1) {
 		monster.attack(character);
 		character.attack(monster);
-	}else
-	{
-		monster.attack();
+	} else {
+		monster.attack(character);
 	}
 }
 

@@ -12,6 +12,6 @@ export class Monstres {
     attack(ennemi){
 	    console.log(ennemi)
         ennemi.hp -= this.dammage
-        console.log(`GobeHipo lance son attaque Pourrie des pays du nord et inflige ${this.dammage} points de dommage a ${ennemi}`)
+        console.log(`GobeHipo lance son attaque Pourrie des pays du nord et inflige ${this.dammage} points de dommage a ${ennemi.name}`)
     }
 }

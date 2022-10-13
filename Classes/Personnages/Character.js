@@ -19,6 +19,6 @@ export class Character {
 
 	attack(ennemi){
         ennemi.hp -= this.strength
-        console.log(`${this.nom} lance son attaque de fou et inflige ${this.dammage} points de dommage a ${ennemi}`)
+        console.log(`${this.nom} lance son attaque de fou et inflige ${this.dammage} points de dommage a ${ennemi.name}`)
     }
 }

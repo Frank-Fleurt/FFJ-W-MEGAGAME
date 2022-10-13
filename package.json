@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Frank-Fleurt/FFJ-W-MEGAGAME/issues"
   },
-  "homepage": "https://github.com/Frank-Fleurt/FFJ-W-MEGAGAME#readme"
+  "homepage": "https://github.com/Frank-Fleurt/FFJ-W-MEGAGAME#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
