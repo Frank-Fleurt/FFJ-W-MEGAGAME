@@ -25,3 +25,4 @@ Game project Js day 3 by Florian Jérémie Frank
 ## 3e itération
 - introduction de puissance sur les armes
 - mise en place de levels pour les personnages
+- implementer la classe combat
