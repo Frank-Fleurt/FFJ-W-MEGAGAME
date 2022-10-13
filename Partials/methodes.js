@@ -11,9 +11,15 @@ export function play() {
 	let monster = new Monstres()
 	monster.display()
 
-	while (character.hp > 1 && monster.hp > 1) {
+	while (character.hp > 0 && monster.hp > 0) {
 		playRound(character, monster);
 	}
+
+	if (character.hp >0)
+		console.log("Le monstre est mort")
+	else if (monster.hp > 0)
+		console.log("Le joueur est mort")
+
 }
 
 function classChoice() {
