@@ -1,12 +1,25 @@
-import {Aventurier} from "./Aventurier.js";
+import { Character } from "./Character.js";
 
-export class Guerrier extends Aventurier {
-	#rage = 0;
-	#maxRage = 100;
-	#strenght = 30;
+export class Guerrier extends Character {
+	rage = 20;
+	maxRage = 100;
+	strength = 40;
+	hp = 150;
 	constructor(nom) {
 		super(nom);
 		this.class = ["Guerrier"]
 	}
 
+	get_rage() {
+		return this.rage
+	} 
+	get_maxRage() {
+		return this.maxRage
+	} 
+	get_strength() {
+		return this.strength
+	}
+	get_hp() {
+		return this.hp
+	}
 }
