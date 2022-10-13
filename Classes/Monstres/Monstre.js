@@ -5,5 +5,8 @@ export class Monstres {
         this.dammage = dammage;
     }
 
-    attaquer()
+    attaquer(ennemi){
+        ennemi.hp -= this.dammage
+        console.log(`GobeHipo lance son attaque Pourrie et inflige ${this.dammage} points de dommage a ${ennemi}`)
+    }
 }
