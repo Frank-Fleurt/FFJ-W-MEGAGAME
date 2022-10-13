@@ -10,7 +10,7 @@ export class Character {
 		return {name: this.name, hp: this.#hp, strenght: this.#strenght, class: this.class[0]};
 	}
 
-	displayeCharacter() {
+	displayCharacter() {
 		console.log(`----------------[ ${this.name} ]---------------- \n
 			Point de vies: ${this.#hp}
 		`)

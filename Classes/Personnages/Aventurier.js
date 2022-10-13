@@ -1,6 +1,6 @@
-import {Personnage} from "../../Cours";
+import {Character} from "./Character.js";
 
-export class Aventurier extends Personnage {
+export class Aventurier extends Character {
 	xp = 0;
 	level = 1;
 	constructor(nom) {
