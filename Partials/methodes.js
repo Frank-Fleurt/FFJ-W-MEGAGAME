@@ -10,17 +10,22 @@ export function play() {
 	let character = classChoice();
 	let random_monster = Math.floor(Math.random() * a_monstres.length);
 	let monster = a_monstres[random_monster];
-	
+
 	monster.display()
 
 	while (character.hp > 0 && monster.hp > 0) {
 		playRound(character, monster);
 	}
 
-	if (character.hp >0)
-		console.log("Le monstre est mort")
-	else if (monster.hp > 0)
+	if (character.hp >0){
+		console.log("Le monstre est mort");
+		// console.log(`Un nouveau monstre arrive : ${monster.name} avec ${monster.hp} points de vie et ${monster.dammage} dégats `)
+		// let random_monster2 = Math.floor(Math.random() * a_monstres.length);
+		// let monster2 = a_monstres[random_monster2];
+		// playRound(character, monster2);
+	} else if (monster.hp > 0) {
 		console.log("Le joueur est mort")
+	}
 
 }
 
