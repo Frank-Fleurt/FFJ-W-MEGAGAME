@@ -1,9 +1,9 @@
 export class Character {
 	#strenght = 10;
-	name = name;
 	#hp = 100;
 	class = ["NPC"]
 	constructor(name) {
+		this.name = name;
 	}
 
 	getCharacter() {

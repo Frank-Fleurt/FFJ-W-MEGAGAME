@@ -1,5 +1,5 @@
-import {Character} from "./Classes/Personnages/Character.js";
+import {Aventurier} from "./Classes/Personnages/Aventurier.js";
 
-let personnage = new Character()
-personnage.displayeCharacter();
+let personnage = new Aventurier("lih");
+console.log(personnage);
 
