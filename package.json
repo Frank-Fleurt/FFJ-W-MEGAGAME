@@ -1,0 +1,20 @@
+{
+  "name": "ffj-w-megagame",
+  "version": "1.0.0",
+  "description": "Js game day 3 ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frank-Fleurt/FFJ-W-MEGAGAME.git"
+  },
+  "author": "Jeremie FLoriant Frank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frank-Fleurt/FFJ-W-MEGAGAME/issues"
+  },
+  "homepage": "https://github.com/Frank-Fleurt/FFJ-W-MEGAGAME#readme"
+}
