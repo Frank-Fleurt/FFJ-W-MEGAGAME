@@ -13,14 +13,15 @@ Game project Js day 3 by Florian Jérémie Frank
     - armes / sort
     - monstres
 - creation des methodes
-    - attaquer
+- fonction attaquer
 
 - nommer les méthodes dans les classes
 
 - avoir un game fonctionnel
 
 ## 2e iteration
-    - mise en place des effect (cf Frank)
+- mise en place des effect (cf Frank)
+
 ## 3e itération
-    - introduction de puissance sur les armes
-    - mise en place de levels pour les personnages
+- introduction de puissance sur les armes
+- mise en place de levels pour les personnages
