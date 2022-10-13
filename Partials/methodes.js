@@ -11,6 +11,7 @@ export function play() {
 	let monster = new Monstres()
 
 	while (character.hp > 1) {
+		monster.display()
 		playRound(character, monster);
 	}
 }
@@ -36,6 +37,8 @@ function prettyClasses() {
 function playRound(character, monster) {
 	let moovs = {1: "Attaquer", 2: "Ne rien faire"}
 	displayMoovs(moovs);
+	console.log(character);
+	console.log(monster);
 	let choice = prompt("Que voulez vous faire ?")
 	if (choice === 1) {
 		monster.display;
