@@ -8,8 +8,10 @@ let prompt = guess({sigint: true},);
 
 export function play() {
 	let character = classChoice();
+	let monster = new Monstres()
+
 	while (character.hp > 1) {
-		playRound(character);
+		playRound(character, monster);
 	}
 }
 
@@ -18,7 +20,6 @@ function classChoice() {
 	Object.keys(choices).forEach(key => {
 		console.log(`[${key}] ${choices[key].class[0]}`)
 	})
-	console.log(Object.keys(choices).length)
 	let choice = prompt("Veuillez selectionner votre personnage parmis le choix au dessus : ")
 	while (!(parseInt(choice) >= 0 && parseInt(choice) < Object.keys(choices).length)){
 		console.log(`${parseInt(choice)} n'est pas un choix valide`)
@@ -32,15 +33,14 @@ function prettyClasses() {
 	return {"0": new Guerrier("Gengis Khan"), "1": new Paladin("Galahd"),"2": new Aventurier("Mike Horn"), "3": new Mage("Ostanes")}
 }
 
-function playRound(character) {
+function playRound(character, monster) {
 	let moovs = {1: "Attaquer", 2: "Ne rien faire"}
-	let monster = new Monstres()
 	displayMoovs(moovs);
 	let choice = prompt("Que voulez vous faire ?")
 	if (choice === 1) {
 		monster.display;
-		monster.attack();
-		character.attack();
+		monster.attack(character);
+		character.attack(monster);
 	}else
 	{
 		monster.attack();
