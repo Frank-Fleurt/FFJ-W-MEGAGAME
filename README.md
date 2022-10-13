@@ -17,8 +17,8 @@ Game project Js day 3 by Florian Jérémie Frank
 
  - création des classes
     - personnages
-        - implementer mana/endurance
-    - armes / sort
+        
+    
     - monstres
 
 - creation des methodes dans les classes
@@ -50,6 +50,8 @@ Game project Js day 3 by Florian Jérémie Frank
 - mise en place des effect (cf Frank)
 - integrer le random des monstrest au demarrage
 - integrer coup spécial pour les armes
+- armes / sort
+- implementer mana/endurance
 ## 3e itération
 - introduction de puissance sur les armes
 - mise en place de levels pour les personnages
