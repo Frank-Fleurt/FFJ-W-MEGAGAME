@@ -1,13 +1,18 @@
 class Spell {
-	constructor(name, cost, effect, power, unlockLvl) {
+	specialAbility = 1;
+	constructor(name, cost, effect) {
 		this.name = name;
 		this.cost = cost;
-		this.effect = effect;
-		this.power = power;
-		this.unlockLvl = unlockLvl;
+		this.affect = effect.affect;
+		this.power = effect.power;
+		this.specialPower = this.power * 2
 	}
 
-	getSpell() {
-		return {cost: this.cost, effect: this.effect, power: this.power}
+	display() {
+		return `Vous avez utilisé le sort ${this.name} qui vous as couté ${this.cost} point de mana`
+	}
+
+	displaySpecial() {
+		return `Vous vous avez utiliser l'attaque spéciale de du sort augmentant les effet par 2 avec la même utilisation d'énergie`
 	}
 }
