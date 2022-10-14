@@ -8,8 +8,10 @@ export class Paladin extends Character {
 	maxFaith = 100;
 	strength = 40;
 	hp = 120;
+	image = "upload/image/Paladin.jpg";
 	maxStamina = 100
 	stamina = 100
+
 
 	constructor(nom) {
 		super(nom);

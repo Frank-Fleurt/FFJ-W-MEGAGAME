@@ -6,11 +6,13 @@ export class Aventurier extends Character {
 	speed = 100;
 	strength = 35;
 	hp = 100;
-	actions = [
-		new Weapon("Dague de l'ombre", 10, {affect: "hp", power:0.25}),
+  image = "upload/image/aventurierMikeHorn.png";
+  actions = [
+    new Weapon("Dague de l'ombre", 10, {affect: "hp", power:0.25}),
 		new Weapon("Double dagues", 15, {affect: "hp", power:0.30}),
 		new Weapon("Épée courte", 20, {affect: "hp", power:0.4}),
 	]
+  
 	constructor(nom) {
 		super(nom);
 		this.class = ["Aventurier"];
