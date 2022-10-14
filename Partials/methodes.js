@@ -45,12 +45,12 @@ function classChoice() {
 
 		
 	// })
-	let choice = prompt(message + "Veuillez selectionner votre personnage parmis le choix au dessus : ")
-	while (!(parseInt(choice) >= 0 && parseInt(choice) < Object.keys(choices).length)){
+	// let choice = prompt(message + "Veuillez selectionner votre personnage parmis le choix au dessus : ")
+	// while (!(parseInt(choice) >= 0 && parseInt(choice) < Object.keys(choices).length)){
 		// console.log(`${parseInt(choice)} n'est pas un choix valide`)
-		choice = prompt("Veuillez selectionner votre personnage parmis le choix au dessus : ")
-	}
-	return choices[choice]
+		// choice = prompt("Veuillez selectionner votre personnage parmis le choix au dessus : ")
+	// }
+	// return choices[choice]
 }
 
 function prettyClasses() {
@@ -61,7 +61,7 @@ function prettyClasses() {
 function playRound(character, monster) {
 	let moovs = {1: "Attaquer", 2: "Ne rien faire"}
 	displayMoovs(moovs);
-	let choice = prompt("Que voulez vous faire ?")
+	// let choice = prompt("Que voulez vous faire ?")
 	if (parseInt(choice) === 1) {
 		monster.attack(character);
 		character.attack(monster);
