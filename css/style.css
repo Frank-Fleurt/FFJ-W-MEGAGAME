@@ -38,7 +38,7 @@ body {
 }
 .card {
   max-width: 500px;
-  border-radius: var(--border-radius-primary);
+  border-radius: 1.25rem !important;
   box-shadow: 24px 24px 80px rgba(0, 0, 0, 0.1);
   padding: 20px 20px 28px 20px;
   box-sizing: border-box;
@@ -46,6 +46,16 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.card span{
+display: flex;
+flex-direction: column;
+}
+
+.heroes {
+  text-align: center;
+}
+
 @media (min-width: 576px) {
   .card {
     flex-direction: row;
@@ -57,6 +67,7 @@ body {
 
 .card__image {
   width: 100%;
+  min-height: 198px;
   max-height: 300px;
   border-radius: var(--border-radius-primary);
   -o-object-fit: cover;
@@ -68,6 +79,7 @@ body {
     width: 45%;
     max-height: none;
     min-height: 400px;
+    min-height: 198px;
     margin-bottom: 0;
   }
 }
@@ -79,15 +91,7 @@ body {
   }
 }
 
-.card__date {
-  display: block;
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-caption);
-  line-height: var(--line-height-caption);
-  text-transform: uppercase;
-  color: var(--color-text);
-  margin-bottom: 6px;
-}
+
 @media (min-width: 576px) {
   .card__date {
     margin-bottom: 8px;
