@@ -1,25 +1,32 @@
 import { Character } from "./Character.js";
+import {Weapon} from "../Combat/Weapon.js";
 
 export class Guerrier extends Character {
 	rage = 20;
 	maxRage = 100;
 	strength = 40;
 	hp = 150;
+
 	constructor(nom) {
 		super(nom);
-		this.class = ["Guerrier"]
+		this.class = ["Guerrier"];
+		this.actions = [
+			new Weapon("Katana", 20, {affect: "hp", power:0.35}),
+			new Weapon("Ache de barbar", 25, {affect: "hp", power:0.4}),
+			new Weapon("Épée à deux mains", 35, {affect: "hp", power:0.5}),
+		];
 	}
 
-	get_rage() {
-		return this.rage
-	} 
-	get_maxRage() {
-		return this.maxRage
-	} 
-	get_strenght() {
-		return this.strength
+	attack(ennemi) {
+		super.attack(ennemi);
+		// this.displayAction(action);
+		if (this.stamina + 20 > this.maxStamina)
+			this.stamina = 100;
+		else
+			this.stamina += 20;
 	}
-	get_hp() {
-		return this.hp
+
+	displayAction(weapon) {
+		return `Vous avez utilisé l'arme ${weapon.name} qui vous a couté ${weapon.cost} point de mana il vous reste ${this.stamina} points d'endurance`;
 	}
 }
