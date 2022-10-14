@@ -9,7 +9,7 @@ export class Character {
 	}
 
 
-	displayCharacter(container) {
+	displayCharacterStats(container) {
 		container.innerHTML = `
 			<span>
                     Nom : ${this.name}
