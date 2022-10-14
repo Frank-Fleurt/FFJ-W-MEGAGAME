@@ -18,14 +18,13 @@ export class Aventurier extends Character {
 
 	attack(ennemi, action) {
 		super.attack(ennemi, action);
-		this.displayAction(action);
 		if (this.stamina + 20 > this.maxStamina)
 			this.stamina = 100;
 		else
 			this.stamina += 20;
 	}
 
-	displayAction(weapon) {
-		return `Vous avez utilisé l'arme ${weapon.name} qui vous a couté ${weapon.cost} point de mana il vous reste ${this.stamina} points d'endurance`;
+	displayAction(weapon, container) {
+		container.innerHTML = ` <div> Vous avez utilisé l'arme ${weapon.name} qui vous a couté ${weapon.cost} point de mana il vous reste ${this.stamina} points d'endurance </div>`;
 	}
 }

@@ -9,11 +9,19 @@ export class Character {
 	}
 
 
-	displayCharacter() {
-		console.log(`----------------[ ${this.name} ]---------------- \n
-			Point de vies: ${this.hp}
-		`)
-		console.log(``)
+	displayCharacter(container) {
+		container.innerHTML = `
+			<span>
+                    Nom : ${this.name}
+                </span>
+                <span>
+                    HP : ${this.hp}
+                </span> 
+                <span>
+                    Force : ${this.strength}
+                </span>
+                </div>
+		`
 	}
 
 
