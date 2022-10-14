@@ -1,8 +1,10 @@
-import {Aventurier} from "./Aventurier.js";
+//import {Aventurier} from "./Aventurier.js";
+import { Character } from "./Character.js";
 
-export class Paladin extends Aventurier {
-	speed = 20;
-	rage = 50;
+export class Paladin extends Character {
+	defense = 20;
+	faith = 0;
+	maxFaith = 100;
 	strength = 40;
 	hp = 120;
 	constructor(nom) {
@@ -11,13 +13,16 @@ export class Paladin extends Aventurier {
 
 	}
 
-	get_speed() {
-	return this.speed
+	get_defense() {
+	return this.defense
 	} 
-	get_rage() {
-		return this.rage
+	get_faith() {
+		return this.faith
 	}
-	get_strength() {
+	get_maxFaith() {
+		return this.faith
+	}
+	get_strenght() {
 		return this.strength
 	}
 	get_hp() {
