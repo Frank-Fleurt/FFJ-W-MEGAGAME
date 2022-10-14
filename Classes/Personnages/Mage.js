@@ -19,7 +19,6 @@ export class Mage extends Character {
 	}
 	attack(ennemi, action) {
 		super.attack(ennemi, action);
-		this.displayAction(action);
 		this.mana -= action.cost
 		if (this.mana + 20 > this.maxMana)
 			this.mana = 100;
@@ -27,8 +26,8 @@ export class Mage extends Character {
 			this.mana += 20;
 	}
 
-	displayAction(spell) {
-		return `Vous avez utilisé le sort ${spell.name} qui vous a couté ${spell.cost} point de mana il vous reste ${this.mana} points de mana`;
+	displayAction(spell, container) {
+		container.innerHTML = `Vous avez utilisé le sort ${spell.name} qui vous a couté ${spell.cost} point de mana il vous reste ${this.mana} points de mana`;
 	}
 
 }
