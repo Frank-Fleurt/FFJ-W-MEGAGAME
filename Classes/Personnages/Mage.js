@@ -7,6 +7,7 @@ export class Mage extends Character {
 	sort = [];
 	strength = 35;
 	hp = 120;
+	image = "upload/image/mage.png";
 	constructor(nom) {
 		super(nom);
 		this.class = ["Mage"]

@@ -5,6 +5,7 @@ export class Aventurier extends Character {
 	speed = 100;
 	strength = 35;
 	hp = 100;
+	image = "upload/image/aventurierMikeHorn.png";
 	constructor(nom) {
 		super(nom);
 		this.class = ["Aventurier"];

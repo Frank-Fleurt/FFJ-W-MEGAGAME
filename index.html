@@ -17,13 +17,13 @@
                 <div class="heroes">
                     <span>Veuillez selectionner votre heros</span>
                 </div>
-                <button type="button" class="btn btn-primary">Aventurier</button>
-                <button type="button" class="btn btn-primary">Guerrier</button>
-                <button type="button" class="btn btn-primary">Mage</button>
-                <button type="button" class="btn btn-primary">Paladin</button>
+                <button type="button" class="btn btn-primary choice" id="aventurier">Aventurier</button>
+                <button type="button" class="btn btn-primary choice" id="guerrier">Guerrier</button>
+                <button type="button" class="btn btn-primary choice" id="mage">Mage</button>
+                <button type="button" class="btn btn-primary choice" id="paladin">Paladin</button>
             </div>
         </section>
-        <section class="flex">
+        <section class="sectionCArd" hidden>
             <div class="card">
                 <img src="upload/image/mage.jpg" class="card__image" alt="brown couch" />
                 <div class="card__content">
@@ -56,13 +56,19 @@
        
 
 
+        
 
-
-
-
-
-
-        <script src="index.js"></script>
+        <script type="module" src="./index.js"></script>
+        <script type="module" src="./Classes/Combat/Combat.js"></script>
+        <script type="module" src="./Classes/Combat/Spell.js"></script>
+        <script type="module" src="./Classes/Combat/Weapon.js"></script>
+        <script type="module" src="./Classes/Monstres/Monstre.js"></script>
+        <script type="module" src="./Classes/Personnages/Aventurier.js"></script>
+        <script type="module" src="./Classes/Personnages/Character.js"></script>
+        <script type="module" src="./Classes/Personnages/Guerrier.js"></script>
+        <script type="module" src="./Classes/Personnages/Mage.js"></script>
+        <script type="module" src="./Classes/Personnages/Paladin.js"></script>
+        <script type="module" src="./Partials/methodes.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     </body>

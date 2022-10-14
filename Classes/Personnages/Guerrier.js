@@ -5,6 +5,7 @@ export class Guerrier extends Character {
 	maxRage = 100;
 	strength = 40;
 	hp = 150;
+	image = "upload/image/Guerrier.png";
 	constructor(nom) {
 		super(nom);
 		this.class = ["Guerrier"]

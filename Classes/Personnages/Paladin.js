@@ -7,6 +7,7 @@ export class Paladin extends Character {
 	maxFaith = 100;
 	strength = 40;
 	hp = 120;
+	image = "upload/image/Paladin.jpg";
 	constructor(nom) {
 		super(nom);
 		this.class = ["Paladin"]

@@ -1,13 +1,10 @@
-import guess from 'prompt-sync';
 import {Aventurier} from "../Classes/Personnages/Aventurier.js";
 import {Guerrier} from "../Classes/Personnages/Guerrier.js";
 import {Mage} from "../Classes/Personnages/Mage.js";
 import {Paladin} from "../Classes/Personnages/Paladin.js";
 import {Monstres} from "../Classes/Monstres/Monstre.js";
-let prompt = guess({sigint: true},);
 
-export function play() {
-	let character = classChoice();
+export function play(character) {
 	let monster = new Monstres()
 	monster.display()
 
@@ -22,16 +19,35 @@ export function play() {
 
 }
 
+function lancerpartieaventurier() {
+	play("aventurier")
+}
+
 function classChoice() {
 	let choices = prettyClasses();
+	let message = ""
 	Object.keys(choices).forEach(key => {
-		console.log(`[${key}] ${choices[key].class[0]}`)
+		message += `[${key}] ${choices[key].class[0]}\n`
 	})
 
+	// const a_choice = document.querySelectorAll(".choice")
+	// a_choice[0].addEventListener("click",lancerpartiavecaventurier) // aventurier
+	// a_choice[1].addEventListener("click") // guerrier
+	// a_choice[2] // mage
+	// a_choice[3] // paladin
 
-	let choice = prompt("Veuillez selectionner votre personnage parmis le choix au dessus : ")
+
+	// a_choice.addEventListener("click", function(){
+	// 	const choice_1 = document.getElementById("_1") 
+	// 	const choice_2 = document.getElementById("_2")
+	// 	const choice_3 = document.getElementById("_3")
+	// 	const choice_4 = document.getElementById("_4")
+
+		
+	// })
+	let choice = prompt(message + "Veuillez selectionner votre personnage parmis le choix au dessus : ")
 	while (!(parseInt(choice) >= 0 && parseInt(choice) < Object.keys(choices).length)){
-		console.log(`${parseInt(choice)} n'est pas un choix valide`)
+		// console.log(`${parseInt(choice)} n'est pas un choix valide`)
 		choice = prompt("Veuillez selectionner votre personnage parmis le choix au dessus : ")
 	}
 	return choices[choice]
