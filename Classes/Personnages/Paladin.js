@@ -1,5 +1,6 @@
 //import {Aventurier} from "./Aventurier.js";
 import { Character } from "./Character.js";
+import {Weapon} from "../Combat/Weapon.js";
 
 export class Paladin extends Character {
 	defense = 20;
@@ -7,26 +8,30 @@ export class Paladin extends Character {
 	maxFaith = 100;
 	strength = 40;
 	hp = 120;
+	maxStamina = 100
+	stamina = 100
+
 	constructor(nom) {
 		super(nom);
 		this.class = ["Paladin"]
-
+		this.actions = [
+			new Weapon("Bouclier de la justice", 20, {affect: "hp", power:0.35}),
+			new Weapon("Ache de barbar", 25, {affect: "hp", power:0.4}),
+			new Weapon("Épée à deux mains", 35, {affect: "hp", power:0.5}),
+		];
 	}
 
-	get_defense() {
-	return this.defense
-	} 
-	get_faith() {
-		return this.faith
+	attack(ennemi, action) {
+		super.attack(ennemi, action);
+		this.displayAction(action);
+		if (this.stamina + 20 > this.maxStamina)
+			this.stamina = 100;
+		else
+			this.stamina += 20;
 	}
-	get_maxFaith() {
-		return this.faith
-	}
-	get_strenght() {
-		return this.strength
-	}
-	get_hp() {
-		return this.hp
+
+	displayAction(weapon) {
+		return `Vous avez utilisé l'arme ${weapon.name} qui vous a couté ${weapon.cost} point de mana il vous reste ${this.stamina} points d'endurance`;
 	}
 
 }

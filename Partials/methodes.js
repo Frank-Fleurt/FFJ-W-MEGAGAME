@@ -3,22 +3,31 @@ import {Aventurier} from "../Classes/Personnages/Aventurier.js";
 import {Guerrier} from "../Classes/Personnages/Guerrier.js";
 import {Mage} from "../Classes/Personnages/Mage.js";
 import {Paladin} from "../Classes/Personnages/Paladin.js";
-import {Monstres} from "../Classes/Monstres/Monstre.js";
+import {Monstres, randomMonster} from "../Classes/Monstres/Monstre.js";
 let prompt = guess({sigint: true},);
+
 
 export function play() {
 	let character = classChoice();
-	let monster = new Monstres()
-	monster.display()
+	let monster = randomMonster();
 
-	while (character.hp > 0 && monster.hp > 0) {
-		playRound(character, monster);
+
+
+	while (character.hp > 0) {
+		monster.display()
+
+		while (monster.hp > 0){
+			playRound(character, monster);
+		}
+		monster = randomMonster();
+
 	}
 
-	if (character.hp >0)
-		console.log("Le monstre est mort")
-	else if (monster.hp > 0)
+	if (character.hp >0){
+		console.log("Le monstre est mort");
+	} else if (monster.hp > 0) {
 		console.log("Le joueur est mort")
+	}
 
 }
 
