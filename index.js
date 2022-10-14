@@ -11,6 +11,13 @@ import {play, displayWelcome} from "./Partials/methodes.js";
 // import { Paladin } from "./Classes/Personnages/Paladin.js";
 
 displayWelcome();
+
+function displaySection() {
+    let section = document.querySelector("#cardContainer") 
+    section.removeAttribute("hidden")
+}
+
+
 function hideButtonsChoice() {
     let buttons = document.querySelectorAll(".choice_button");
     for (const button of buttons) {
@@ -19,9 +26,9 @@ function hideButtonsChoice() {
 }
 
 document.querySelector("#aventurier").addEventListener("click",()=>{
-    play(new Aventurier())
+    // play(new Aventurier())
     // faire apparaitre la div cacher
-
+    displaySection()
     // supprimer les boutons
     hideButtonsChoice()
 })
@@ -29,7 +36,7 @@ document.querySelector("#aventurier").addEventListener("click",()=>{
 document.querySelector("#guerrier").addEventListener("click",()=>{
     play(new Guerrier())
     // faire apparaitre la div cacher
-
+    displaySection()
     // supprimer les boutons
     hideButtonsChoice()
 })
@@ -37,7 +44,7 @@ document.querySelector("#guerrier").addEventListener("click",()=>{
 document.querySelector("#mage").addEventListener("click",()=>{
     play(new Mage())
     // faire apparaitre la div cacher
-
+    displaySection()
     // supprimer les boutons
     hideButtonsChoice()
 })
@@ -45,7 +52,7 @@ document.querySelector("#mage").addEventListener("click",()=>{
 document.querySelector("#paladin").addEventListener("click",()=>{
     play(new Paladin())
     // faire apparaitre la div cacher
-
+    displaySection()
     // supprimer les boutons
     hideButtonsChoice()
 })
