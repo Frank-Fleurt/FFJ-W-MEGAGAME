@@ -1,13 +1,10 @@
-class Spell {
-	constructor(name, cost, effect, power, unlockLvl) {
+export class Spell {
+	specialAbility = 1;
+	constructor(name, cost, effect) {
 		this.name = name;
 		this.cost = cost;
-		this.effect = effect;
-		this.power = power;
-		this.unlockLvl = unlockLvl;
-	}
-
-	getSpell() {
-		return {cost: this.cost, effect: this.effect, power: this.power}
+		this.affect = effect.affect;
+		this.power = effect.power;
+		this.specialPower = this.power * 2
 	}
 }

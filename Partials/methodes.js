@@ -2,21 +2,13 @@ import {Aventurier} from "../Classes/Personnages/Aventurier.js";
 import {Guerrier} from "../Classes/Personnages/Guerrier.js";
 import {Mage} from "../Classes/Personnages/Mage.js";
 import {Paladin} from "../Classes/Personnages/Paladin.js";
-import {Monstres} from "../Classes/Monstres/Monstre.js";
+import {Monstres, randomMonster} from "../Classes/Monstres/Monstre.js";
 
 export function play(character) {
-	let monster = new Monstres()
-	monster.display()
+  let monster = randomMonster();
+  monster.display();
 
-	while (character.hp > 0 && monster.hp > 0) {
-		playRound(character, monster);
 	}
-
-	if (character.hp >0)
-		console.log("Le monstre est mort")
-	else if (monster.hp > 0)
-		console.log("Le joueur est mort")
-
 }
 
 function lancerpartieaventurier() {
