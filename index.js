@@ -1,5 +1,7 @@
 import { Aventurier } from "./Classes/Personnages/Aventurier.js";
+import { Guerrier } from "./Classes/Personnages/Guerrier.js";
 import { Mage } from "./Classes/Personnages/Mage.js";
+import { Paladin } from "./Classes/Personnages/Paladin.js";
 import {play, displayWelcome} from "./Partials/methodes.js";
 
 // import {Character} from "./Classes/Personnages/Character.js";
@@ -25,7 +27,7 @@ document.querySelector("#aventurier").addEventListener("click",()=>{
 })
 
 document.querySelector("#guerrier").addEventListener("click",()=>{
-    // play(new Aventurier())
+    play(new Guerrier())
     // faire apparaitre la div cacher
 
     // supprimer les boutons
@@ -33,7 +35,7 @@ document.querySelector("#guerrier").addEventListener("click",()=>{
 })
 
 document.querySelector("#mage").addEventListener("click",()=>{
-    play(new Aventurier())
+    play(new Mage())
     // faire apparaitre la div cacher
 
     // supprimer les boutons
@@ -41,7 +43,7 @@ document.querySelector("#mage").addEventListener("click",()=>{
 })
 
 document.querySelector("#paladin").addEventListener("click",()=>{
-    play(new Aventurier())
+    play(new Paladin())
     // faire apparaitre la div cacher
 
     // supprimer les boutons
