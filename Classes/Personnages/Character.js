@@ -3,7 +3,6 @@ export class Character {
 	hp = 100;
 	class = ["NPC"];
 	actions=[];
-
 	constructor(name) {
 		this.name = name;
 	}
@@ -15,7 +14,6 @@ export class Character {
 		`)
 		console.log(``)
 	}
-
 
 	attack(ennemi, action){
         ennemi.hp -= this.strength

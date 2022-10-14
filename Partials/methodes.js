@@ -36,6 +36,8 @@ function classChoice() {
 	Object.keys(choices).forEach(key => {
 		console.log(`[${key}] ${choices[key].class[0]}`)
 	})
+
+
 	let choice = prompt("Veuillez selectionner votre personnage parmis le choix au dessus : ")
 	while (!(parseInt(choice) >= 0 && parseInt(choice) < Object.keys(choices).length)){
 		console.log(`${parseInt(choice)} n'est pas un choix valide`)
